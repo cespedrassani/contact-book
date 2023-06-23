@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-primary-color: #293462;
+    --bg-secondary-color: #293462;
+    --bg-tertiary-color: #1CD6CE;
+    --text-primary-color: #FFFFFF;
+    --button-secondary-color: #D61C4E;
+    --border-primary-color: rgba(0, 0, 0, 0.1);
+    --table-primary-color: #1CD6CE;
+    
+    --large-font-size: 2rem;
+    --medium-font-size: 1.2rem;
+    --normal-font-size: 1.125rem;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.2);;
+    padding-top: 60px;
+    font-family: sans-serif;
+}
+
+header,
+form,
+thead {
+    background-color: var(--bg-primary-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    font-size: var(--large-font-size);
+    font-weight: bold;
+    color: var(--text-primary-color);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.input {
+    margin-right: 20px;
+}
+
+form {
+    max-width: 100%;
+    padding: 1rem;
+    display: flex;
+}
+
+form input,
+form button {
+    padding: .7rem;
+    font-size: var(--normal-font-size);
+    border: none;
+}
+
+form input {
+    background-color: var(--text-primary-color);
+    border-bottom: 2px solid var(--text-secondary-color);
+}
+
+form button {
+    background-color: var(--bg-tertiary-color);
+    color: var(--text-primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+form button:hover {
+    filter: contrast(1.2);
+}
+
+form button:nth-last-child(1) {
+    background-color: var(--button-secondary-color);
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    color: var(--text-primary-color);
+}
+
+tbody {
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    font-weight: bold;
+}
+
+table th {
+    border-bottom: 2px solid var(--text-secondary-color);
+    padding: 1rem;
+    font-size: var(--medium-font-size);
+    font-weight: bold;
+}
+
+table td {
+    font-size: var(--normal-font-size);
+    text-align: center;
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--border-primary-color);
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: var(--table-primary-color);
+    color: var(--bg-secondary-color);
+}
+
+td {
+    border-top: 1px solid white;
+    border-collapse: collapse;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Agenda de contatos</title>
+
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Agenda de contatos</h1>
+        </header>
+
+        <form id="form">
+           <div style="display: flex; flex-direction: row; width: 100%;">
+            <input
+                class="input" 
+                type="text" 
+                placeholder="Nome" 
+                required 
+                id="nome-contato"
+            >
+            <input 
+                class="input" 
+                type="tel" 
+                placeholder="Telefone" 
+                required
+                maxlength="11"
+                minlength="10"
+                id="tel-contato"
+            >
+            <button style="margin-right: 20px;" type="submit">
+                Adicionar
+            </button>
+            <div style="display: grid; width: 100%;">
+                <button style="justify-self: flex-end;" type="button" onclick="limpar()">
+                    Limpar
+                </button>
+            </div>
+           </div>
+        </form>
+
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" id="total-contatos"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+    <script src="/src/js/main.js"></script>
+</body>
+</html>
